@@ -5,7 +5,7 @@ html {
 }
 
 h1 {
-  margin-top: 609vh;
+  margin-top: 900vh;
 }
 
 body {
@@ -90,7 +90,7 @@ img {
   margin-top: -25px;
   font-size: 15px;
   position: absolute;
-  display:block;
+  display: block;
   -webkit-transform: rotate(-20deg);
   transform: rotate(-20deg);
 }
