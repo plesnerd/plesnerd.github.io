@@ -4,9 +4,7 @@ html {
   background: linear-gradient(to right bottom, #00a1d8, #00a1d8);
 }
 
-h1 {
-  margin-top: 560vh;
-}
+
 
 body {
   display: flex;
@@ -87,7 +85,7 @@ img {
   color: yellow;
   padding: 2px 8px;
   margin-left: 310px;
-  margin-top: -25px;
+  margin-top: -15px;
   font-size: 15px;
   position: absolute;
   display:block;

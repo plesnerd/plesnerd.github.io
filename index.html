@@ -1,72 +1,169 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Handjet:wght@700&display=swap">
-  <style>
-    body {
-      font-family: "Sofia", sans-serif;
-    }
-  </style>
+  <title>ples nerd</title>
+  <link href="https://fonts.cdnfonts.com/css/8bit-wonder" rel="stylesheet" />
+  <link rel="icon" type="x-icon" href="favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <!-- ios support -->
+  <link rel="apple-touch-icon" href="images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-128x128.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
+  <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+  <meta name="theme-color" content="#db4938" />
+
 </head>
-  <link rel="stylesheet" href="style.css"
-  <body>
-  
-    <h1>          </h1>
-    <h1>          </h1>
-    <h1>          </h1>
-    <h1>          </h1>
-    <h1>          </h1> 
-    <h1>          </h1>
-    <h1>          </h1>
-    <h1>          </h1>
-    <h1>          </h1>
-    <h1>          </h1>
-    <h1>          </h1>
-    <h1>          </h1> 
-    <h1>          </h1>
-    <h1>          </h1>
-    <h1>          </h1>
-  <h1>Ples Nerd</h1>
+
+<body>
+  <div class="center">
+    <div class="title-container">
+      <h1>Ples Nerd<span id="splash-text"></span></h1>
+
+    </div>
+  </div>
   <h2 id="score">nerd: 0</h2>
-  <img src="nerd.png" id="nerd-image">
-    <embed src="plesnerd.wav" loop="true" autostart="true" width="2" height="2">
+  <img src="nerd.png" id="nerd-image" />
+
   <div id="shop">
     <h2>shop</h2>
-    
-    <div id="options">
+    <div id="options" class="center">
+
+
       <div class="option">
         <h3>handfull of nerd</h3>
         <p>price: 50</p>
         <button onclick="buyItem(50)">Buy</button>
       </div>
-     
-      <div id="options">
+
       <div class="option">
         <h3>bucket of nerd</h3>
         <p>price: 1,500</p>
         <button onclick="buyBucketNerd(1500)">Buy</button>
-         </div>
-       
-        <div id="options">
-        <div class="option">
-          <h3>crate of nerd</h3>
-          <p>price: 20,000</p>
-          <button onclick="buyCrateNerd(20000)">Buy</button>
-          </div>
-         
-            <div id="options">
-            <div class="option">
-              <h3>coming soon!</h3>
-              <p>price: ???</p>
-              <button onclick="buyVanNerd()">Buy</button>
-               </div>
-        </div>
       </div>
-      
+
+      <div class="option">
+        <h3>crate of nerd</h3>
+        <p>price: 20,000</p>
+        <button onclick="buyCrateNerd(20000)">Buy</button>
+      </div>
+
+      <div class="option">
+        <h3>van of nerd</h3>
+        <p>price: 100,000</p>
+        <button onclick="buyVanNerd(100000)">Buy</button>
+      </div>
+
+      <div class="option">
+        <h3>yacht of nerd</h3>
+        <p>price: 1,000,000</p>
+        <button onclick="buyYachtNerd(1000000)">Buy</button>
+      </div>
+
+      <div class="option">
+        <h3>mansion of nerd</h3>
+        <p>price: 10,000,000</p>
+        <button onclick="buyMansionNerd(10000000)">Buy</button>
+      </div>
+
+      <div class="option">
+        <h3>island of nerd</h3>
+        <p>price: 100,000,000</p>
+        <button onclick="buyIslandNerd(100000000)">Buy</button>
+      </div>
+
+      <div class="option">
+        <h3>country of nerd</h3>
+        <p>price: 1,000,000,000</p>
+        <button onclick="buyCountryNerd(1000000000)">Buy</button>
+      </div>
+
+      <div class="option">
+        <h3>continent of nerd</h3>
+        <p>price: 10,000,000,000</p>
+        <button onclick="buyContinentNerd(10000000000)">Buy</button>
+      </div>
+
+      <div class="option">
+        <h3>planet of nerd</h3>
+        <p>price: 100,000,000,000</p>
+        <button onclick="buyWorldNerd(100000000000)">Buy</button>
+      </div>
+
+      <div class="option">
+        <h3>solar system of nerd</h3>
+        <p>price: 1,000,000,000,000</p>
+        <button onclick="buySolarNerd(1000000000000)">Buy</button>
+      </div>
+
+      <div class="option">
+        <h3>galaxy of nerd</h3>
+        <p>price: 10,000,000,000,000</p>
+        <button onclick="buyGalaxyNerd(10000000000000)">Buy</button>
+      </div>
+
+      <div class="option">
+        <h3>galaxy cluster of nerd</h3>
+        <p>price: 100,000,000,
+000,000</p>
+        <button onclick="buyGalaxyClusterNerd(100000000000000)">Buy</button>
+      </div>
+      <div class="option">
+        <h3>universe of nerd</h3>
+        <p>price: 1,000,000,
+000,000,000</p>
+        <button onclick="buyUniverseNerd(1000000000000000)">Buy</button>
+      </div>
+      <div class="option">
+        <h3>multiverse of nerd</h3>
+        <p>price: 10,000,000,
+      000,000,000</p>
+        <button onclick="buyMultiverseNerd(10000000000000000)">Buy</button>
+      </div>
+      <div class="option">
+        <h3>omni of nerd</h3>
+        <p>price: 100,000,000,
+      000,000,000</p>
+        <button onclick="buyOmniverseNerd(100000000000000000)">Buy</button>
+      </div>
     </div>
+  </div>
+  </div>
+
+  <h2>clicking upgrades</h2>
+  <div id="options" class="center">
+    <div class="option">
+      <h3>extra finger</h3>
+      <p>price: 1,500</p>
+      <button onclick="buyExtraFinger(1500)">Buy</button>
+    </div>
+
+    <div class="option">
+      <h3>extra hand</h3>
+      <p>price: 20,000</p>
+      <button onclick="buyExtraHand(20000)">Buy</button>
+    </div>
+
+
+
+
+
+
   </div>
 
   <script src="script.js"></script>
+  </div>
+  <p class="center">made by bluebaystudios 👻</p>
+  <p class="center">version 4.6</p>
 </body>
-<p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ made by bluebaystudios 👻</p>         
+
 </html>
