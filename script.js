@@ -444,8 +444,3 @@ document.addEventListener('DOMContentLoaded', function() {
   const splashText = document.getElementById('splash-text');
   splashText.textContent = sayings[Math.floor(Math.random() * sayings.length)];
 });
-
-const myURL = "https://ples-nerd.bluebaystudios.repl.co";
-if (location.href != myURL) {
-  location.replace("https://plesnerd.github.io");
-}
