@@ -19,12 +19,15 @@
   <link rel="apple-touch-icon" href="images/icons/icon-192x192.png" />
   <link rel="apple-touch-icon" href="images/icons/icon-384x384.png" />
   <link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
-  <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
-  <meta name="theme-color" content="#db4938" />
+  <meta name="apple-mobile-web-app-status-bar" content="#000080" />
+  <meta name="theme-color" content="#000080" />
 
 </head>
 
 <body>
+  <div style="z-index: -1;" id="tsparticles"></div>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.37.5/tsparticles.min.js"></script>
+
   <div class="center">
     <div class="title-container">
      <h1></h1>
@@ -136,6 +139,13 @@
           000,000,000</p>
         <button onclick="buyOmniverseNerd(100000000000000000)">Buy</button>
       </div>
+      <div class="option">
+        <h3>"The Beyond" of nerd</h3>
+        <p>price: 1,000,000,000,
+          000,000,000</p>
+        <button onclick="buyBeyondNerd(1000000000000000000)">Buy</button>
+      </div>
+
     </div>
   </div>
   </div>
@@ -153,18 +163,29 @@
       <p>price: 20,000</p>
       <button onclick="buyExtraHand(20000)">Buy</button>
     </div>
+    <div class="option">
+      <h3>extra person</h3>
+      <p>price: 100,000</p>
+      <button onclick="buyExtraPerson(100000)">Buy</button>
+    </div>
 
 
-
-
+  
 
 
   </div>
+  <h3>Links</h3>
+  <a href="https://github.com/plesnerd/plesnerd.github.io">GitHub</a><br>
+  <a href="credits.html">Credits</a><br>
+  <a href="trailer.mov">Trailer/Ad</a><br>
 
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.37.5/tsparticles.min.js"></script>
   <script src="script.js"></script>
   </div>
   <p class="center">made by bluebaystudios 👻</p>
-  <p class="center">version 4.6</p>
+  <p class="center">version 4.7</p>
 </body>
 
 </html>
