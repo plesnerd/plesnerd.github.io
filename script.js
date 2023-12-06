@@ -363,7 +363,7 @@ function buySeasonalNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 200000) {
-      upgradeCount +=80000; 
+      upgradeCount +=8000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     }
