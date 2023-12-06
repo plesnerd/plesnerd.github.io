@@ -352,8 +352,7 @@ function buyBeyondNerd(price) {
     alert("you don't have enough nerd to buy this item");
   }
 }
-
-function buySeasonalNerd(price) {
+function buyHolidayNerd(price) {
   if (nerd >= price) {
     nerd -= price;
     updateScore();
@@ -363,7 +362,7 @@ function buySeasonalNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 200000) {
-      upgradeCount +=8000; 
+      upgradeCount +=80000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     }
@@ -371,6 +370,7 @@ function buySeasonalNerd(price) {
     alert("you don't have enough nerd to buy this item");
   }
 }
+
 //clicking upgrades
 function buyExtraFinger(price) {
   if (nerd >= price) {
