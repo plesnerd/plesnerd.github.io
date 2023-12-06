@@ -1,1 +1,0 @@
-sudo replit-cli promote-repl "@bluebaystudios/Ples-nerd" trending

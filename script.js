@@ -353,14 +353,32 @@ function buyBeyondNerd(price) {
   }
 }
 
-
-//clicking upgrades
-function buyExtraFinger(price) {
+function buySeasonalNerd(price) {
   if (nerd >= price) {
     nerd -= price;
     updateScore();
     localStorage.setItem("nerd", nerd);
+    if (price === 50) {
+      upgradeCount++;
+      localStorage.setItem("upgradeCount", upgradeCount);
+      startUpgradeInterval(upgradeCount);
+    } else if (price === 200000) {
+      upgradeCount +=8000000000; 
+      localStorage.setItem("upgradeCount", upgradeCount);
+      startUpgradeInterval(upgradeCount);
+    }
+  } else {
+    alert("you don't have enough nerd to buy this item");
+  }
+}
+//clicking upgrades
+function buyExtraFinger(price) {
+  if (nerd >= price) {
+    nerd -= price;
     npc += 1;
+    updateScore();
+    localStorage.setItem("nerd", nerd);
+    localStorage.setItem("npc", npc); 
   } else {
     alert("you don't have enough nerd to buy this item");
   }
@@ -368,9 +386,10 @@ function buyExtraFinger(price) {
 function buyExtraHand(price) {
   if (nerd >= price) {
     nerd -= price;
+    npc += 5;
     updateScore();
     localStorage.setItem("nerd", nerd);
-    npc += 5;
+    localStorage.setItem("npc", npc); 
   } else {
     alert("you don't have enough nerd to buy this item");
   }
@@ -378,9 +397,10 @@ function buyExtraHand(price) {
 function buyExtraPerson(price) {
   if (nerd >= price) {
     nerd -= price;
+    npc += 10;
     updateScore();
     localStorage.setItem("nerd", nerd);
-    npc += 10;
+    localStorage.setItem("npc", npc); 
   } else {
     alert("you don't have enough nerd to buy this item");
   }

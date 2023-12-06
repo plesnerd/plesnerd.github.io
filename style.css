@@ -15,13 +15,13 @@ body {
 }
 
 h1 {
-  color: #e63b7a;
+  color: #b51a00;
   font-size: 50px;
   font-family: '8BIT WONDER', sans-serif;
 }
 
 h2 {
-  color: #b92d5d;
+  color: #4e7a27;
   font-size: 24px;
   font-family: '8BIT WONDER', sans-serif;
 }
@@ -41,7 +41,7 @@ img {
   width: 200px;
   margin: 16px;
   padding: 16px;
-  background-color: #b92d5d;
+  background-color: #b51a00;
   border-radius: 8px;
 }
 
@@ -52,7 +52,7 @@ img {
 }
 
 .option p {
-  color: #fff;
+  color: #ffffff;
   font-size: 16px;
   margin-bottom: 16px;
 }
@@ -61,7 +61,7 @@ img {
   width: 100px;
   padding: 8px;
   font-size: 16px;
-  background-color: #7a219e;
+  background-color: #4e7a27;
   border: none;
   border-radius: 0;
   cursor: pointer;

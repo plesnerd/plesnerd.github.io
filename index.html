@@ -27,8 +27,12 @@
 <body>
   <div style="z-index: -1;" id="tsparticles"></div>
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.37.5/tsparticles.min.js"></script>
-  <embed src="christmas.mp3" loop="true" autostart="true" width="2" height="0">
-  <div class="center">
+  
+<audio autoplay loop>
+    <source src="christmas.mp3" type="audio/mpeg">
+  </audio>
+ 
+ <div class="center">
     <div class="title-container">
      <h1></h1>
  <h1>Ples Nerd<span id="splash-text"></span></h1>
@@ -36,7 +40,8 @@
     </div>
   </div>
   <h2 id="score">nerd: 0</h2>
-  <img src="nerd.png" id="nerd-image" />
+  <img src="christmasnerd.png" id="nerd-image" width="400" 
+     height="270"/>
 
   <div id="shop">
     <h2>shop</h2>
@@ -145,7 +150,7 @@
           000,000,000</p>
         <button onclick="buyBeyondNerd(1000000000000000000)">Buy</button>
       </div>
-
+   
     </div>
   </div>
   </div>
@@ -168,8 +173,11 @@
       <p>price: 100,000</p>
       <button onclick="buyExtraPerson(100000)">Buy</button>
     </div>
-
-
+<h2> Seasonal Upgrade</h2>
+    <div class="option">
+      <h3>Santa of nerd</h3>
+      <p>price:200,000</p>
+      <button onclick="buySeasonalNerd(200000)">Buy</button>
   
 
 
@@ -178,14 +186,15 @@
   <a href="https://github.com/plesnerd/plesnerd.github.io">GitHub</a><br>
   <a href="credits.html">Credits</a><br>
   <a href="trailer.mov">Trailer/Ad</a><br>
+ <a href="yo.txt"> yo </a><br>
 
- 
 
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-confetti@2/tsparticles.preset.confetti.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.37.5/tsparticles.min.js"></script>
   <script src="script.js"></script>
   </div>
   <p class="center">made by bluebaystudios 👻</p>
-  <p class="center">version 4.7</p>
+  <p class="center">version 4.8 ( christmas )</p>
 </body>
 
 </html>
