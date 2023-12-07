@@ -4,31 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>45</title>
+    <title>test</title>
     <link rel="stylesheet" href="style.css">
   </head>
     <body>
-        <input type="password" id="passwordInput" />
-        <button onclick="checkPassword()">Enter</button>
+      <input type="text">
+  <button onclick="PasscodeCheck()">enter</button>
 
-        <div id="protectedContent" style="display: none;">
-            <!-- All the details about the "secret" page goes here -->
-        </div>
+      <script>
+function PasscodeCheck() {
+       if (document.querySelector("input[type=text]").value=="1234") {
+         location.href="/yourSecretPage.html"
+       }
+}
 
-        <script>
-            var secretCode = "45786"; 
-
-            function checkPassword() {
-                var input = document.getElementById("passwordInput").value;
-
-                if (input === secretCode) {
-                    document.getElementById("protectedContent").style.display = "block";
-                } else {
-                    alert("6");
-                }
-            }
-        </script>
-<p>78</p>
+</script>
 
     </body>
 
