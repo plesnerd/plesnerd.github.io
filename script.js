@@ -100,7 +100,7 @@ function buyCrateNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 20000) {
-      upgradeCount +=20; 
+      upgradeCount +=2000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       confetti({
