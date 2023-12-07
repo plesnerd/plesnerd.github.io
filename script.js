@@ -37,6 +37,12 @@ function buyItem(price) {
       upgradeCount++;
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -60,6 +66,12 @@ function buyBucketNerd(price) {
       upgradeCount +=4; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -91,6 +103,12 @@ function buyCrateNerd(price) {
       upgradeCount +=20; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -112,6 +130,12 @@ function buyVanNerd(price) {
       upgradeCount +=100; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -130,6 +154,12 @@ function buyYachtNerd(price) {
       upgradeCount +=200; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -148,6 +178,12 @@ function buyMansionNerd(price) {
       upgradeCount +=1000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -166,6 +202,8 @@ function buyIslandNerd(price) {
       upgradeCount +=10000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -184,6 +222,12 @@ function buyCountryNerd(price) {
       upgradeCount +=20000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -202,6 +246,12 @@ function buyContinentNerd(price) {
       upgradeCount +=200000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -220,6 +270,12 @@ function buyWorldNerd(price) {
       upgradeCount +=1000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -239,6 +295,12 @@ function buySolarNerd(price) {
       upgradeCount +=2000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -257,6 +319,12 @@ function buyGalaxyNerd(price) {
       upgradeCount +=2000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -275,6 +343,12 @@ function buyGalaxyClusterNerd(price) {
       upgradeCount +=10000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -293,6 +367,12 @@ function buyUniverseNerd(price) {
       upgradeCount +=100000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -311,6 +391,12 @@ function buyMultiverseNerd(price) {
       upgradeCount +=1000000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -329,6 +415,12 @@ function buyOmniverseNerd(price) {
       upgradeCount +=10000000000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -347,6 +439,12 @@ function buyBeyondNerd(price) {
       upgradeCount +=99999999999999999999999999999999999999999999; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -365,6 +463,12 @@ function buyHolidayNerd(price) {
       upgradeCount +=80000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -379,6 +483,12 @@ function buyExtraFinger(price) {
     updateScore();
     localStorage.setItem("nerd", nerd);
     localStorage.setItem("npc", npc); 
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+
   } else {
     alert("you don't have enough nerd to buy this item");
   }
@@ -390,6 +500,12 @@ function buyExtraHand(price) {
     updateScore();
     localStorage.setItem("nerd", nerd);
     localStorage.setItem("npc", npc); 
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+
   } else {
     alert("you don't have enough nerd to buy this item");
   }
@@ -401,6 +517,14 @@ function buyExtraPerson(price) {
     updateScore();
     localStorage.setItem("nerd", nerd);
     localStorage.setItem("npc", npc); 
+    confetti({
+      particleCount: 1000,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+
+  
+
   } else {
     alert("you don't have enough nerd to buy this item");
   }
