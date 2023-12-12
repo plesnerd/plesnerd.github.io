@@ -806,3 +806,19 @@ tsParticles.load("tsparticles", {
   },
   zLayers: 1,
 });
+function nerdChanged() {
+  switch (nerd) {
+    case nerd >= 1 && score <= 500: // greater than or equal to 1, or less than or equal to 500
+      document.querySelector("div#rankIndicator").innerHTML=`dirt`
+      break // so it doesn't get stuck (for good measure idk)
+    case nerd >= 501 && score <= 10000:
+      document.querySelector("div#rankIndicator").innerHTML=`metal`
+      break
+    // ...
+    case nerd >= 10000001:
+      document.querySelector("div#rankIndicator").innerHTML=`godlike`
+    default: // for any other case, like if score is 0 (may be unnecessary bc if the score is 0, then it wouldn't have been changed yet) or somehow negative
+      document.querySelector("div#rankIndicator").innerHTML=`none`
+      break
+  }
+}
