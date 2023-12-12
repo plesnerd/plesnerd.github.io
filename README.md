@@ -13,8 +13,8 @@
 
 Play The Game Here!
 
-https://plesnerd.github.io
+👾 https://plesnerd.github.io
 ## License
 
-[Apache-2.0 License](https://www.apache.org/licenses/LICENSE-2.0)
+📜 [Apache-2.0 License](https://www.apache.org/licenses/LICENSE-2.0)
 
