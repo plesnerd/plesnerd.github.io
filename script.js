@@ -474,6 +474,31 @@ function buyHolidayNerd(price) {
     alert("you don't have enough nerd to buy this item");
   }
 }
+function buyPresentNerd(price) {
+  if (nerd >= price) {
+    nerd -= price;
+    updateScore();
+    localStorage.setItem("nerd", nerd);
+    if (price === 50) {
+      upgradeCount++;
+      localStorage.setItem("upgradeCount", upgradeCount);
+      startUpgradeInterval(upgradeCount);
+    } else if (price === 1000000) {
+      upgradeCount +=800000; 
+      localStorage.setItem("upgradeCount", upgradeCount);
+      startUpgradeInterval(upgradeCount);
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
+    }
+  } else {
+    alert("you don't have enough nerd to buy this item");
+  }
+}
+
 
 //clicking upgrades
 function buyExtraFinger(price) {
