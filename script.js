@@ -27,6 +27,7 @@ function increaseScore() {
   updateScore();
   localStorage.setItem("nerd", nerd);
 }
+alert ("Acoounts are coming soon. Stay tuned for more updates. All data saved in broweser (current nerds) will be lost (sorry) -bluebay")
 //upgrades
 function buyItem(price) {
   if (nerd >= price) {
