@@ -1,6 +1,18 @@
 html {
   width: 100%;
-  background: linear-gradient(to right bottom, #00a1d8, #00a1d8);
+  background-color: #f4a4c0;;
+}
+.option a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 16px;
+  padding: 8px;
+  text-align: center;
+  background-color: #e63b7a;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 
@@ -15,13 +27,13 @@ body {
 }
 
 h1 {
-  color: #b51a00;
+  color: #ee719e;
   font-size: 50px;
   font-family: '8BIT WONDER', sans-serif;
 }
 
 h2 {
-  color: #4e7a27;
+  color: #e63b7a;
   font-size: 24px;
   font-family: '8BIT WONDER', sans-serif;
 }
@@ -41,7 +53,7 @@ img {
   width: 200px;
   margin: 16px;
   padding: 16px;
-  background-color: #b51a00;
+  background-color: #99244f;
   border-radius: 8px;
 }
 
@@ -61,7 +73,7 @@ img {
   width: 100px;
   padding: 8px;
   font-size: 16px;
-  background-color: #4e7a27;
+  background-color: #982abc;
   border: none;
   border-radius: 0;
   cursor: pointer;
@@ -89,4 +101,28 @@ img {
   display:block;
   -webkit-transform: rotate(-20deg);
   transform: rotate(-20deg);
+}
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  20% {
+    color: orange;
+  }
+  40% {
+    color: yellow;
+  }
+  60% {
+    color: green;
+  }
+  80% {
+    color: blue;
+  }
+  100% {
+    color: violet;
+  }
+}
+
+.rainbow {
+  animation: rainbow 2s infinite;
 }

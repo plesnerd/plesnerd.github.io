@@ -29,7 +29,7 @@
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.37.5/tsparticles.min.js"></script>
 
   <audio autoplay loop>
-    <source src="assets/christmas.mp3" type="audio/mpeg">
+    <!-- <source src="assets/christmas.mp3" type="audio/mpeg"> ggs! -->
   </audio>
 
   <div class="center">
@@ -40,12 +40,12 @@
     </div>
   </div>
   <h2 id="score">nerd: 0</h2>
-  <img src="assets/christmasnerd.png" id="nerd-image" width="400" height="270" />
-  
+  <img src="assets/valentinesnerd.png" id="nerd-image" width="400" height="270" />
 
-<p style="text-align: center;"> 
-  
-<div id="shop">
+
+  <p style="text-align: center;">
+
+  <div id="shop">
     <h2>shop</h2>
     <div id="options" class="center">
 
@@ -175,41 +175,54 @@
       <p>price: 100,000</p>
       <button onclick="buyExtraPerson(100000)">Buy</button>
     </div>
+    <div class="option">
+      <h3>extra group</h3>
+      <p>price: 500,000</p>
+      <button onclick="buyExtraPerson(500000)">Buy</button>
+    </div>
+
     <h2> Seasonal Upgrades</h2>
     <div class="option">
-      <h3>Santa of nerd</h3>
+      <h3>Chocolate nerd</h3>
       <p>price:200,000</p>
       <button onclick="buyHolidayNerd(200000)">Buy</button>
     </div>
-        <div class="option">
-          <h3>present of nerd</h3>
-          <p>price:1,000,000</p>
-          <button onclick="buyPresentNerd(1000000)">Buy</button>
+    <div class="option">
+      <h3>Heart of nerd</h3>
+      <p>price:1,000,000</p>
+      <button onclick="buyPresentNerd(1000000)">Buy</button>
     </div>
 
-    <img src="assets/wolfden.png" style="border-radius: 25px;"width="300" height="150"/>
-
-    <h3>Links</h3>
-    <a href="https://github.com/plesnerd/plesnerd.github.io">GitHub</a><br>
-    <a href="credits/credits.html">Credits</a><br>
-    <a href="assets/trailer.mov">Trailer/Ad</a><br>
-    <a href="assets/yo.html"> yo </a><br>
-<a href="christmas"> Countdown to Christmas! </a><br>
-
-    <script
+    
+    <div class=option>
+      <h3>Links</h3>
+      <button onclick="location.href = 'https://github.com/plesnerd/plesnerd.github.io'">GitHub</button><br>
+      <button onclick="location.href = 'credits/credits.html'">Credits</button><br>
+      <button onclick="location.href = 'assets/trailer.mov'">Trailer/Ad</button><br>
+      <button onclick="location.href = 'assets/yo.html'"> yo </button><br>
+      <!--  <button onclick="location.href = 'christmas'"> Countdown to 2024! </button><br> -->
+    </div>
+    <img src="assets/wolfden.png" style="border-radius: 25px;" width="300" height="150" />
+ <script
       src="https://cdn.jsdelivr.net/npm/tsparticles-preset-confetti@2/tsparticles.preset.confetti.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.37.5/tsparticles.min.js"></script>
     <script src="script.js"></script>
+     <script src="snow.js"></script> 
+
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.2/tsparticles.confetti.bundle.min.js"></script>
 
   </div>
-  <p class="center">made by bluebaystudios 👻</p>
-  <p class="center">version 4.8.2 ( christmas )</p> <p class="center">thanks for 2k runs on<a href="https://replit.com/@BluebayStudios/Ples-nerd?v=1">replit</a> It means the world to me ❤️</p>
+  <p class="center rainbow">made by bluebaystudios 👻</p>
+  <p class="option">version 4.9 (Valentine's Day)</p>
+  <p class="center"> <a href="https://palestinecharity.org">🇵🇸FREE PALESTINE🇵🇸</a></p>
+
+ 
+
 
   <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-    import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+    import {initializeApp} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import {getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    import {getDatabase, ref, set, onValue} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
     const firebaseConfig = {
       apiKey: "AIzaSyCtmbW6rKo1g61-jJ-yQ2MoJGWauSe3GMg",
       authDomain: "ples-nerd.firebaseapp.com",
@@ -219,8 +232,54 @@
       appId: "1:651680043335:web:239abc131be883656d3c62"
     };
     const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
 
     // not done
+
+    window.addEventListener('keyup', (e) => {
+      // adapt this how you will. It's just an example so if you press these keys it will run the code to do it.
+      if (e.key == "c") {
+        let email = prompt("Enter email to sign up with: ")
+        let pass = prompt("Enter a password to sign up with: ")
+
+        createUserWithEmailAndPassword(auth, email, pass).then(() => {
+          alert("Account created")
+        })
+      }
+      if (e.key == "s") {
+        let email = prompt("Enter the email of your account: ")
+        let pass = prompt("Enter the password to your account: ")
+
+        signInWithEmailAndPassword(auth, email, pass).then(() => {
+          alert("Signed in")
+        })
+      }
+    })
+
+    function updateNerds(newVal) {
+      if (auth.currentUser) {
+        // user is signed in
+
+        set(ref(db, "users/" + auth.currentUser.uid + "/nerds"), newVal)
+      }
+    }
+
+    onAuthStateChanged(auth).then((user) => {
+      if (user) {
+        // they're logged in
+
+        // display nerds value from db
+
+        get(ref(db, "users/" + user.uid + "/nerds")).then((snap) => {
+          let nerdsValue = snap.val()
+
+          // if it doesn't exist, itll be null
+        })
+      } else {
+        // logged out
+        // do something else (reset labels, ask to login, etc.)
+      }
+    })
   </script>
 
 </body>
