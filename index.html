@@ -219,68 +219,7 @@
  
 
 
-  <script type="module">
-    import {initializeApp} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import {getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-    import {getDatabase, ref, set, onValue} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-    const firebaseConfig = {
-      apiKey: "AIzaSyCtmbW6rKo1g61-jJ-yQ2MoJGWauSe3GMg",
-      authDomain: "ples-nerd.firebaseapp.com",
-      projectId: "ples-nerd",
-      storageBucket: "ples-nerd.appspot.com",
-      messagingSenderId: "651680043335",
-      appId: "1:651680043335:web:239abc131be883656d3c62"
-    };
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth();
-
-    // not done
-
-    window.addEventListener('keyup', (e) => {
-      // adapt this how you will. It's just an example so if you press these keys it will run the code to do it.
-      if (e.key == "c") {
-        let email = prompt("Enter email to sign up with: ")
-        let pass = prompt("Enter a password to sign up with: ")
-
-        createUserWithEmailAndPassword(auth, email, pass).then(() => {
-          alert("Account created")
-        })
-      }
-      if (e.key == "s") {
-        let email = prompt("Enter the email of your account: ")
-        let pass = prompt("Enter the password to your account: ")
-
-        signInWithEmailAndPassword(auth, email, pass).then(() => {
-          alert("Signed in")
-        })
-      }
-    })
-
-    function updateNerds(newVal) {
-      if (auth.currentUser) {
-        // user is signed in
-
-        set(ref(db, "users/" + auth.currentUser.uid + "/nerds"), newVal)
-      }
-    }
-
-    onAuthStateChanged(auth).then((user) => {
-      if (user) {
-        // they're logged in
-
-        // display nerds value from db
-
-        get(ref(db, "users/" + user.uid + "/nerds")).then((snap) => {
-          let nerdsValue = snap.val()
-
-          // if it doesn't exist, itll be null
-        })
-      } else {
-        // logged out
-        // do something else (reset labels, ask to login, etc.)
-      }
-    })
-  </script>
+ 
 
 </body>
 
