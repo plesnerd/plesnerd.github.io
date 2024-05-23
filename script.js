@@ -7,8 +7,6 @@ let upgradeInterval;
 
 updateScore();
 
-// Firebase funcs
-function updateNerds(){}
 
 nerdImage.addEventListener("click", increaseScore);
 
@@ -30,7 +28,9 @@ function increaseScore() {
   localStorage.setItem("nerd", nerd);
 }
 alert ("🇵🇸FREE PALESTINE🇵🇸 Donate at palestinecharity.org 🇵🇸")
-alert("Sorry, I had to cancel accounts.Stay tuned for a HUGE suprise next update :) -bluebay ")
+alert ("As of may 23rd, 2024, this will be the last ever Ples Nerd update. 2023 and 2024 were amazing years, thank you all for you support for the past 8 months. Ples Nerd wouldn't be the same without its fans. As a gift, I created a time machine at the bottom of the page. Signing out for the last ever time, -bluebay") 
+
+
 
 
 //upgrades
@@ -43,32 +43,10 @@ function buyItem(price) {
       upgradeCount++;
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 250,
-        scalar: 2,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
     }
@@ -79,7 +57,6 @@ function buyItem(price) {
 
 function updateScore() {
   scoreElement.textContent = `nerd: ${nerd}`;
-  updateNerds(nerd)
 }
 
 function buyBucketNerd(price) {
@@ -95,32 +72,10 @@ function buyBucketNerd(price) {
       upgradeCount +=4; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
     }
@@ -154,32 +109,10 @@ function buyCrateNerd(price) {
       upgradeCount +=2000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
     }
@@ -203,32 +136,10 @@ function buyVanNerd(price) {
       upgradeCount +=100; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
     }
@@ -249,32 +160,10 @@ function buyYachtNerd(price) {
       upgradeCount +=200; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
     }
@@ -295,32 +184,10 @@ function buyMansionNerd(price) {
       upgradeCount +=1000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
     }
@@ -341,33 +208,7 @@ function buyIslandNerd(price) {
       upgradeCount +=10000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
 
-      confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
-      });
 
     }
   } else {
@@ -387,32 +228,10 @@ function buyCountryNerd(price) {
       upgradeCount +=20000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
     }
@@ -433,32 +252,10 @@ function buyContinentNerd(price) {
       upgradeCount +=200000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
     }
@@ -479,33 +276,12 @@ function buyWorldNerd(price) {
       upgradeCount +=1000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
-      });
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -525,32 +301,10 @@ function buySolarNerd(price) {
       upgradeCount +=2000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
     }
@@ -571,33 +325,12 @@ function buyGalaxyNerd(price) {
       upgradeCount +=2000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
-      });
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -616,32 +349,10 @@ function buyGalaxyClusterNerd(price) {
       upgradeCount +=10000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
     }
@@ -662,32 +373,10 @@ function buyUniverseNerd(price) {
       upgradeCount +=100000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
     }
@@ -708,33 +397,12 @@ function buyMultiverseNerd(price) {
       upgradeCount +=1000000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
-      });
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -753,32 +421,10 @@ function buyOmniverseNerd(price) {
       upgradeCount +=10000000000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
     }
@@ -799,33 +445,12 @@ function buyBeyondNerd(price) {
       upgradeCount +=99999999999999999999999999999999999999999999; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
-      });
     }
   } else {
     alert("you don't have enough nerd to buy this item");
@@ -844,32 +469,10 @@ function buyHolidayNerd(price) {
       upgradeCount +=80000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
     }
@@ -890,32 +493,10 @@ function buyPresentNerd(price) {
       upgradeCount +=800000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      const defaults = {
-        spread: 360,
-        ticks: 100,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["heart"],
-        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-      };
-
       confetti({
-        ...defaults,
-        particleCount: 50,
-        scalar: 2,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 25,
-        scalar: 3,
-      });
-
-      confetti({
-        ...defaults,
-        particleCount: 10,
-        scalar: 4,
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
 
     }
@@ -933,32 +514,10 @@ function buyExtraFinger(price) {
     updateScore();
     localStorage.setItem("nerd", nerd);
     localStorage.setItem("npc", npc); 
-    const defaults = {
-      spread: 360,
-      ticks: 100,
-      gravity: 0,
-      decay: 0.94,
-      startVelocity: 30,
-      shapes: ["heart"],
-      colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-    };
-
     confetti({
-      ...defaults,
-      particleCount: 50,
-      scalar: 2,
-    });
-
-    confetti({
-      ...defaults,
-      particleCount: 25,
-      scalar: 3,
-    });
-
-    confetti({
-      ...defaults,
-      particleCount: 10,
-      scalar: 4,
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
     });
 
   } else {
@@ -972,32 +531,10 @@ function buyExtraHand(price) {
     updateScore();
     localStorage.setItem("nerd", nerd);
     localStorage.setItem("npc", npc); 
-    const defaults = {
-      spread: 360,
-      ticks: 100,
-      gravity: 0,
-      decay: 0.94,
-      startVelocity: 30,
-      shapes: ["heart"],
-      colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-    };
-
     confetti({
-      ...defaults,
-      particleCount: 50,
-      scalar: 2,
-    });
-
-    confetti({
-      ...defaults,
-      particleCount: 25,
-      scalar: 3,
-    });
-
-    confetti({
-      ...defaults,
-      particleCount: 10,
-      scalar: 4,
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
     });
 
   } else {
@@ -1011,82 +548,18 @@ function buyExtraPerson(price) {
     updateScore();
     localStorage.setItem("nerd", nerd);
     localStorage.setItem("npc", npc); 
-    const defaults = {
-      spread: 360,
-      ticks: 100,
-      gravity: 0,
-      decay: 0.94,
-      startVelocity: 30,
-      shapes: ["heart"],
-      colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-    };
-
     confetti({
-      ...defaults,
-      particleCount: 50,
-      scalar: 2,
+      particleCount: 1000,
+      spread: 100,
+      origin: { y: 0.6 },
     });
 
-    confetti({
-      ...defaults,
-      particleCount: 25,
-      scalar: 3,
-    });
-
-    confetti({
-      ...defaults,
-      particleCount: 10,
-      scalar: 4,
-    });
-   
   
 
   } else {
     alert("you don't have enough nerd to buy this item");
   }
 }
-function buyExtraGroup(price) {
-  if (nerd >= price) {
-    nerd -= price;
-    npc += 50;
-    updateScore();
-    localStorage.setItem("nerd", nerd);
-    localStorage.setItem("npc", npc); 
-    const defaults = {
-      spread: 360,
-      ticks: 100,
-      gravity: 0,
-      decay: 0.94,
-      startVelocity: 30,
-      shapes: ["heart"],
-      colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-    };
-
-    confetti({
-      ...defaults,
-      particleCount: 50,
-      scalar: 2,
-    });
-
-    confetti({
-      ...defaults,
-      particleCount: 50,
-      scalar: 3,
-    });
-
-    confetti({
-      ...defaults,
-      particleCount: 100,
-      scalar: 4,
-    });
-
-
-
-  } else {
-    alert("you don't have enough nerd to buy this item");
-  }
-}
-
 //idk what this is lol
 self.addEventListener('fetch', (event) => {
   event.respondWith(

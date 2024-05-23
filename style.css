@@ -1,6 +1,6 @@
 html {
   width: 100%;
-  background-color: #f4a4c0;;
+  background-color: #00a1d8;;
 }
 .option a {
   display: block;
@@ -10,7 +10,7 @@ html {
   margin-bottom: 16px;
   padding: 8px;
   text-align: center;
-  background-color: #e63b7a;
+  background-color: #f5ec00;
   border-radius: 8px;
   cursor: pointer;
 }
@@ -27,13 +27,13 @@ body {
 }
 
 h1 {
-  color: #ee719e;
+  color: #fff76b;
   font-size: 50px;
   font-family: '8BIT WONDER', sans-serif;
 }
 
 h2 {
-  color: #e63b7a;
+  color: #f5ec00;
   font-size: 24px;
   font-family: '8BIT WONDER', sans-serif;
 }
@@ -53,7 +53,7 @@ img {
   width: 200px;
   margin: 16px;
   padding: 16px;
-  background-color: #99244f;
+  background-color: #e4ef65;
   border-radius: 8px;
 }
 
@@ -73,7 +73,7 @@ img {
   width: 100px;
   padding: 8px;
   font-size: 16px;
-  background-color: #982abc;
+  background-color: #c4bc00;
   border: none;
   border-radius: 0;
   cursor: pointer;

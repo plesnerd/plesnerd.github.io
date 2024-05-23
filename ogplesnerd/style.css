@@ -1,0 +1,66 @@
+  html {
+    height: 100%;
+    width: 100%;
+    background-color: #00a1d8;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  h1 {
+    color: #e63b7a;
+    font-family: 'Handjet', cursive;
+    font-size: 36px;
+  }
+
+  h2 {
+    color: #b92d5d;
+    font-family: 'Handjet', cursive;
+    font-size: 24px;
+  }
+
+  img {
+    cursor: pointer;
+  }
+
+  #shop {
+    margin-top: 32px;
+  }
+
+  .option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin: 16px;
+    padding: 16px;
+    background-color: #b92d5d;
+    border-radius: 8px;
+  }
+
+  .option h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .option p {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .option button {
+    width: 100px;
+    padding: 8px;
+    font-size: 16px;
+    background-color: #4d22b2;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+  }
