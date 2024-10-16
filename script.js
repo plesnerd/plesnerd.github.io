@@ -28,9 +28,6 @@ function increaseScore() {
   localStorage.setItem("nerd", nerd);
 }
 
-alert ("ok maybe i need something else to do but one last update")
-
-
 
 //upgrades
 function buyItem(price) {
@@ -42,11 +39,39 @@ function buyItem(price) {
       upgradeCount++;
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
@@ -67,15 +92,35 @@ function buyBucketNerd(price) {
       upgradeCount++;
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-    } else if (price === 1500) {
-      upgradeCount +=4; 
+    } else if (price === 750) {
+      upgradeCount +=999999999999999; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
@@ -108,11 +153,31 @@ function buyCrateNerd(price) {
       upgradeCount +=2000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
@@ -135,11 +200,31 @@ function buyVanNerd(price) {
       upgradeCount +=100; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
@@ -159,11 +244,31 @@ function buyYachtNerd(price) {
       upgradeCount +=200; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
@@ -183,11 +288,31 @@ function buyMansionNerd(price) {
       upgradeCount +=1000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
@@ -227,11 +352,31 @@ function buyCountryNerd(price) {
       upgradeCount +=20000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
@@ -251,11 +396,31 @@ function buyContinentNerd(price) {
       upgradeCount +=200000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
@@ -275,11 +440,31 @@ function buyWorldNerd(price) {
       upgradeCount +=1000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
@@ -300,11 +485,31 @@ function buySolarNerd(price) {
       upgradeCount +=2000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
@@ -324,11 +529,31 @@ function buyGalaxyNerd(price) {
       upgradeCount +=2000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
@@ -348,11 +573,31 @@ function buyGalaxyClusterNerd(price) {
       upgradeCount +=10000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
@@ -372,11 +617,31 @@ function buyUniverseNerd(price) {
       upgradeCount +=100000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
@@ -396,11 +661,31 @@ function buyMultiverseNerd(price) {
       upgradeCount +=1000000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
@@ -420,11 +705,31 @@ function buyOmniverseNerd(price) {
       upgradeCount +=10000000000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
@@ -444,11 +749,31 @@ function buyBeyondNerd(price) {
       upgradeCount +=99999999999999999999999999999999999999999999; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
@@ -468,11 +793,31 @@ function buyHolidayNerd(price) {
       upgradeCount +=80000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
@@ -492,11 +837,31 @@ function buyPresentNerd(price) {
       upgradeCount +=800000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
 
     }
   } else {
