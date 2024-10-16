@@ -27,9 +27,8 @@ function increaseScore() {
   updateScore();
   localStorage.setItem("nerd", nerd);
 }
-alert ("🇵🇸FREE PALESTINE🇵🇸 Donate at palestinecharity.org 🇵🇸")
-alert ("As of may 23rd, 2024, this will be the last ever Ples Nerd update. 2023 and 2024 were amazing years, thank you all for you support for the past 8 months. Ples Nerd wouldn't be the same without its fans. As a gift, I created a time machine at the bottom of the page. Signing out for the last ever time, -bluebay") 
 
+alert ("ok maybe i need something else to do but one last update")
 
 
 

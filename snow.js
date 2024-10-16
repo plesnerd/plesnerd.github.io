@@ -12,7 +12,7 @@ tsParticles.load("tsparticles", {
   },
   backgroundMask: {
     composite: "destination-out",
-    cover: { color: { value: "#fff" }, opacity: 1 },
+    cover: { color: { value: "#FFA500" }, opacity: 1 },
     enable: false,
   },
   fullScreen: { enable: true, zIndex: 0 },
@@ -41,7 +41,7 @@ tsParticles.load("tsparticles", {
       overlap: { enable: true, retries: 0 },
     },
     color: {
-      value: "#fff",
+      value: "#FFA500",
       animation: {
         h: { count: 0, enable: false, offset: 0, speed: 1, sync: true },
         s: { count: 0, enable: false, offset: 0, speed: 1, sync: true },
@@ -75,13 +75,13 @@ tsParticles.load("tsparticles", {
     },
     links: {
       blink: false,
-      color: { value: "#ffffff" },
+      color: { value: "#FFA500" },
       consent: false,
       distance: 500,
       enable: false,
       frequency: 1,
       opacity: 1,
-      shadow: { blur: 5, color: { value: "#00ff00" }, enable: false },
+      shadow: { blur: 5, color: { value: "#FFA500" }, enable: false },
       triangles: { enable: false, frequency: 1 },
       width: 2,
       warp: false,
@@ -118,7 +118,7 @@ tsParticles.load("tsparticles", {
       speed: 2,
       spin: { acceleration: 0, enable: false },
       straight: false,
-      trail: { enable: false, length: 10, fillColor: { value: "#000000" } },
+      trail: { enable: false, length: 10, fillColor: { value: "#FFA500" } },
       vibrate: false,
       warp: false,
     },
