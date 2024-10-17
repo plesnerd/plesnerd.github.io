@@ -995,7 +995,7 @@ function buyPresentNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 1000000) {
-      upgradeCount +=800000; 
+      upgradeCount +=20000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       const defaults = {
