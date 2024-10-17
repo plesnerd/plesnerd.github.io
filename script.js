@@ -1013,11 +1013,7 @@ function buyExtraFinger(price) {
     updateScore();
     localStorage.setItem("nerd", nerd);
     localStorage.setItem("npc", npc); 
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 },
-    });
+   
     const defaults = {
         spread: 360,
         ticks: 100,
@@ -1064,11 +1060,7 @@ function buyExtraHand(price) {
     updateScore();
     localStorage.setItem("nerd", nerd);
     localStorage.setItem("npc", npc); 
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 },
-    });
+   
     const defaults = {
         spread: 360,
         ticks: 100,
@@ -1115,11 +1107,7 @@ function buyExtraPerson(price) {
     updateScore();
     localStorage.setItem("nerd", nerd);
     localStorage.setItem("npc", npc); 
-    confetti({
-      particleCount: 1000,
-      spread: 100,
-      origin: { y: 0.6 },
-    });
+   
 
     const defaults = {
         spread: 360,
@@ -1225,6 +1213,10 @@ document.addEventListener('DOMContentLoaded', function() {
      "flavor update june 2070",
      "erm actually... 🤓",
      "What are those??",
+"top fiteen myseries solved by 4 chan",
+"we miss you Ibrahim🫡",
+
+
     "As seen on TV!"
   ];
 
