@@ -88,12 +88,12 @@ function buyBucketNerd(price) {
     nerd -= price;
     updateScore();
     localStorage.setItem("nerd", nerd);
-    if (price === 50) {
+    if (price === 1) {
       upgradeCount++;
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-    } else if (price === 750) {
-      upgradeCount +=999999999999999; 
+    } else if (price === 1) {
+      upgradeCount +=20; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       function shoot() {
@@ -236,12 +236,12 @@ function buyYachtNerd(price) {
     nerd -= price;
     updateScore();
     localStorage.setItem("nerd", nerd);
-    if (price === 50) {
+    if (price === 750) {
       upgradeCount++;
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-    } else if (price === 1000000) {
-      upgradeCount +=200; 
+    } else if (price === 750) {
+      upgradeCount +=20; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       function shoot() {
