@@ -212,7 +212,7 @@ function buyVanNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 100000) {
-      upgradeCount +=100; 
+      upgradeCount +=250; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       const defaults = {
