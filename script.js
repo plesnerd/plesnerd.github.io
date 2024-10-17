@@ -39,6 +39,8 @@ function buyItem(price) {
       upgradeCount++;
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+     
+
       const defaults = {
         spread: 360,
         ticks: 100,
@@ -88,14 +90,22 @@ function buyBucketNerd(price) {
     nerd -= price;
     updateScore();
     localStorage.setItem("nerd", nerd);
-    if (price === 1) {
+    if (price === 50) {
       upgradeCount++;
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-    } else if (price === 1) {
+    } else if (price === 750) {
       upgradeCount +=20; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
       function shoot() {
         confetti({
           ...defaults,
@@ -127,9 +137,6 @@ function buyBucketNerd(price) {
     alert("you don't have enough nerd to buy this item");
   }
 }
-
-
-
 function startUpgradeInterval(upgrades) {
   if (upgradeInterval) {
     clearInterval(upgradeInterval);  
@@ -153,6 +160,14 @@ function buyCrateNerd(price) {
       upgradeCount +=2000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
       function shoot() {
         confetti({
           ...defaults,
@@ -200,6 +215,14 @@ function buyVanNerd(price) {
       upgradeCount +=100; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
       function shoot() {
         confetti({
           ...defaults,
@@ -244,6 +267,14 @@ function buyYachtNerd(price) {
       upgradeCount +=20; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
       function shoot() {
         confetti({
           ...defaults,
@@ -288,6 +319,14 @@ function buyMansionNerd(price) {
       upgradeCount +=1000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
       function shoot() {
         confetti({
           ...defaults,
@@ -352,6 +391,14 @@ function buyCountryNerd(price) {
       upgradeCount +=20000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
       function shoot() {
         confetti({
           ...defaults,
@@ -396,6 +443,14 @@ function buyContinentNerd(price) {
       upgradeCount +=200000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
       function shoot() {
         confetti({
           ...defaults,
@@ -440,6 +495,14 @@ function buyWorldNerd(price) {
       upgradeCount +=1000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
       function shoot() {
         confetti({
           ...defaults,
@@ -485,6 +548,14 @@ function buySolarNerd(price) {
       upgradeCount +=2000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
       function shoot() {
         confetti({
           ...defaults,
@@ -529,6 +600,14 @@ function buyGalaxyNerd(price) {
       upgradeCount +=2000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
       function shoot() {
         confetti({
           ...defaults,
@@ -573,6 +652,14 @@ function buyGalaxyClusterNerd(price) {
       upgradeCount +=10000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
       function shoot() {
         confetti({
           ...defaults,
@@ -617,6 +704,14 @@ function buyUniverseNerd(price) {
       upgradeCount +=100000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
       function shoot() {
         confetti({
           ...defaults,
@@ -661,6 +756,14 @@ function buyMultiverseNerd(price) {
       upgradeCount +=1000000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
       function shoot() {
         confetti({
           ...defaults,
@@ -705,6 +808,14 @@ function buyOmniverseNerd(price) {
       upgradeCount +=10000000000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
       function shoot() {
         confetti({
           ...defaults,
@@ -749,6 +860,14 @@ function buyBeyondNerd(price) {
       upgradeCount +=99999999999999999999999999999999999999999999; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
       function shoot() {
         confetti({
           ...defaults,
@@ -793,6 +912,14 @@ function buyHolidayNerd(price) {
       upgradeCount +=80000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
       function shoot() {
         confetti({
           ...defaults,
@@ -837,6 +964,14 @@ function buyPresentNerd(price) {
       upgradeCount +=800000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
       function shoot() {
         confetti({
           ...defaults,
