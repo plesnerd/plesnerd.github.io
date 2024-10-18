@@ -1,12 +1,12 @@
 let nerd = localStorage.getItem("nerd") ? parseFloat(localStorage.getItem("nerd")) : 0;
 let upgradeCount = localStorage.getItem("upgradeCount") ? parseInt(localStorage.getItem("upgradeCount")) : 0;
-let npc = localStorage.getItem("npc") ? parseInt(localStorage.getItem("npc")) : 1;
 const scoreElement = document.getElementById("score");
 const nerdImage = document.getElementById("nerd-image");
+const upgradeCountElement = document.getElementById("upgradeCount");
 let upgradeInterval;
 
 updateScore();
-
+updateUpgradeCount();
 
 nerdImage.addEventListener("click", increaseScore);
 
@@ -14,18 +14,30 @@ if (upgradeCount > 0) {
   startUpgradeInterval(upgradeCount);
 }
 
-function startUpgradeInterval(upgrades) {
-  upgradeInterval = setInterval(() => {
-    nerd += upgrades * 0.5;
-    updateScore();
-    localStorage.setItem("nerd", nerd);
-  }, 1000);
+function updateScore() {
+  scoreElement.textContent = `nerd: ${nerd.toFixed(2)}`;
 }
 
 function increaseScore() {
-  nerd += npc;
+  nerd += 1;
   updateScore();
+  updateUpgradeCount();
+
   localStorage.setItem("nerd", nerd);
+}
+
+function startUpgradeInterval(count) {
+  clearInterval(upgradeInterval);
+  upgradeInterval = setInterval(() => {
+    nerd += count; 
+    updateScore();
+    updateUpgradeCount();
+    localStorage.setItem("nerd", nerd);
+  }, 1000); 
+}
+
+function updateUpgradeCount() {
+  upgradeCountElement.textContent = `per second: ${Math.floor(upgradeCount / 2)}`; // Display half of the upgrade count
 }
 
 
@@ -39,6 +51,7 @@ function buyItem(price) {
       upgradeCount++;
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
      
 
       const defaults = {
@@ -84,7 +97,6 @@ function buyItem(price) {
 function updateScore() {
   scoreElement.textContent = `nerd: ${nerd}`;
 }
-
 function buyBucketNerd(price) {
   if (nerd >= price) {
     nerd -= price;
@@ -98,6 +110,117 @@ function buyBucketNerd(price) {
       upgradeCount +=20; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
+
+    }
+  } else {
+    alert("you don't have enough nerd to buy this item");
+  }
+}
+function buyHandfullNerd(price) {
+  if (nerd >= price) {
+    nerd -= price;
+    updateScore();
+    localStorage.setItem("nerd", nerd);
+    if (price === 50) {
+      upgradeCount++;
+      localStorage.setItem("upgradeCount", upgradeCount);
+      startUpgradeInterval(upgradeCount);
+    } else if (price === 55) {
+      upgradeCount +=2; 
+      localStorage.setItem("upgradeCount", upgradeCount);
+      startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
+
+    }
+  } else {
+    alert("you don't have enough nerd to buy this item");
+  }
+}
+
+function buyBoxNerd(price) {
+  if (nerd >= price) {
+    nerd -= price;
+    updateScore();
+    localStorage.setItem("nerd", nerd);
+    if (price === 50) {
+      upgradeCount++;
+      localStorage.setItem("upgradeCount", upgradeCount);
+      startUpgradeInterval(upgradeCount);
+    } else if (price === 300) {
+      upgradeCount +=12; 
+      localStorage.setItem("upgradeCount", upgradeCount);
+      startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
       const defaults = {
         spread: 360,
         ticks: 100,
@@ -160,6 +283,8 @@ function buyCrateNerd(price) {
       upgradeCount +=2000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
       const defaults = {
         spread: 360,
         ticks: 100,
@@ -215,6 +340,8 @@ function buyVanNerd(price) {
       upgradeCount +=250; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
       const defaults = {
         spread: 360,
         ticks: 100,
@@ -267,6 +394,8 @@ function buyYachtNerd(price) {
       upgradeCount +=20; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
       const defaults = {
         spread: 360,
         ticks: 100,
@@ -319,6 +448,8 @@ function buyMansionNerd(price) {
       upgradeCount +=1000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
       const defaults = {
         spread: 360,
         ticks: 100,
@@ -371,7 +502,7 @@ function buyIslandNerd(price) {
       upgradeCount +=10000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-
+      updateUpgradeCount();
       const defaults = {
           spread: 360,
           ticks: 100,
@@ -425,6 +556,8 @@ function buyCountryNerd(price) {
       upgradeCount +=20000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
       const defaults = {
         spread: 360,
         ticks: 100,
@@ -477,6 +610,8 @@ function buyContinentNerd(price) {
       upgradeCount +=200000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
       const defaults = {
         spread: 360,
         ticks: 100,
@@ -529,6 +664,8 @@ function buyWorldNerd(price) {
       upgradeCount +=1000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
       const defaults = {
         spread: 360,
         ticks: 100,
@@ -582,6 +719,8 @@ function buySolarNerd(price) {
       upgradeCount +=2000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
       const defaults = {
         spread: 360,
         ticks: 100,
@@ -634,6 +773,8 @@ function buyGalaxyNerd(price) {
       upgradeCount +=2000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
       const defaults = {
         spread: 360,
         ticks: 100,
@@ -686,6 +827,8 @@ function buyGalaxyClusterNerd(price) {
       upgradeCount +=10000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
       const defaults = {
         spread: 360,
         ticks: 100,
@@ -738,6 +881,8 @@ function buyUniverseNerd(price) {
       upgradeCount +=100000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
       const defaults = {
         spread: 360,
         ticks: 100,
@@ -790,6 +935,8 @@ function buyMultiverseNerd(price) {
       upgradeCount +=1000000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
       const defaults = {
         spread: 360,
         ticks: 100,
@@ -842,6 +989,8 @@ function buyOmniverseNerd(price) {
       upgradeCount +=10000000000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
       const defaults = {
         spread: 360,
         ticks: 100,
@@ -891,9 +1040,11 @@ function buyBeyondNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 1000000000000000) {
-      upgradeCount +=99999999999999999999999999999999999999999999; 
+      upgradeCount += 999999999999999; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
       const defaults = {
         spread: 360,
         ticks: 100,
@@ -946,6 +1097,8 @@ function buyHolidayNerd(price) {
       upgradeCount +=80000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
       const defaults = {
         spread: 360,
         ticks: 100,
@@ -998,6 +1151,8 @@ function buyPresentNerd(price) {
       upgradeCount +=20000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
       const defaults = {
         spread: 360,
         ticks: 100,
