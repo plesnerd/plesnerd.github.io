@@ -386,12 +386,12 @@ function buyYachtNerd(price) {
     nerd -= price;
     updateScore();
     localStorage.setItem("nerd", nerd);
-    if (price === 750) {
+    if (price === 50) {
       upgradeCount++;
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-    } else if (price === 750) {
-      upgradeCount +=20; 
+    } else if (price === 1000000) {
+      upgradeCount +=4000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -552,7 +552,7 @@ function buyCountryNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 1000000000) {
-      upgradeCount +=20000; 
+      upgradeCount +=100000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
