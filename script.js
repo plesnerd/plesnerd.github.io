@@ -1,5 +1,6 @@
 let nerd = localStorage.getItem("nerd") ? parseFloat(localStorage.getItem("nerd")) : 0;
 let upgradeCount = localStorage.getItem("upgradeCount") ? parseInt(localStorage.getItem("upgradeCount")) : 0;
+let npc = localStorage.getItem("npc") ? parseInt(localStorage.getItem("npc")) : 1;
 const scoreElement = document.getElementById("score");
 const nerdImage = document.getElementById("nerd-image");
 const upgradeCountElement = document.getElementById("upgradeCount");
@@ -1147,7 +1148,7 @@ function buyPresentNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 1000000) {
-      upgradeCount +=20000; 
+      upgradeCount +=40000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
