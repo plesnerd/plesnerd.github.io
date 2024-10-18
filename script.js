@@ -606,7 +606,7 @@ function buyContinentNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 10000000000) {
-      upgradeCount +=200000000; 
+      upgradeCount +=20000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
