@@ -20,10 +20,9 @@ function updateScore() {
 }
 
 function increaseScore() {
-  nerd += 1;
+  nerd += npc;
   updateScore();
   updateUpgradeCount();
-
   localStorage.setItem("nerd", nerd);
 }
 
