@@ -217,7 +217,7 @@ function buyBoxNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 300) {
-      upgradeCount +=20; 
+      upgradeCount +=40; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -338,7 +338,7 @@ function buyVanNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 100000) {
-      upgradeCount +=250; 
+      upgradeCount +=25000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -392,7 +392,7 @@ function buyYachtNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 1000000) {
-      upgradeCount +=4000; 
+      upgradeCount +=40000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -445,7 +445,7 @@ function buyMansionNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 10000000) {
-      upgradeCount +=1000; 
+      upgradeCount += 5858585; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -499,7 +499,7 @@ function buyIslandNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 100000000) {
-      upgradeCount +=10000; 
+      upgradeCount +=10000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -553,7 +553,7 @@ function buyCountryNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 1000000000) {
-      upgradeCount +=100000; 
+      upgradeCount +=10000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -607,7 +607,7 @@ function buyContinentNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 10000000000) {
-      upgradeCount +=200000; 
+      upgradeCount +=200000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -661,7 +661,7 @@ function buyWorldNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 100000000000) {
-      upgradeCount +=1000000; 
+      upgradeCount +=100000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -716,7 +716,7 @@ function buySolarNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 1000000000000) {
-      upgradeCount +=2000000; 
+      upgradeCount +=200000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -770,7 +770,7 @@ function buyGalaxyNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 1000000000000) {
-      upgradeCount +=2000000; 
+      upgradeCount +=2000000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -824,7 +824,7 @@ function buyGalaxyClusterNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 10000000000000) {
-      upgradeCount +=10000000; 
+      upgradeCount +=100000000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -878,7 +878,7 @@ function buyUniverseNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 10000000000000) {
-      upgradeCount +=100000000; 
+      upgradeCount +=1000000000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -932,7 +932,7 @@ function buyMultiverseNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 10000000000000) {
-      upgradeCount +=1000000000; 
+      upgradeCount +=1000000000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -1040,7 +1040,7 @@ function buyBeyondNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 1000000000000000) {
-      upgradeCount += 999999999999999; 
+      upgradeCount *= 999999999999999; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
