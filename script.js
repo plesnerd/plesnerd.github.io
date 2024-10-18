@@ -38,7 +38,7 @@ function startUpgradeInterval(count) {
 }
 
 function updateUpgradeCount() {
-  upgradeCountElement.textContent = `per second: ${Math.floor(upgradeCount / 2)}`; // Display half of the upgrade count
+  upgradeCountElement.textContent = `per second: ${Math.floor(upgradeCount / 1)}`; // Display half of the upgrade count
 }
 
 
