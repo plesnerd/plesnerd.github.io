@@ -107,7 +107,7 @@ function buyBucketNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 750) {
-      upgradeCount +=20; 
+      upgradeCount +=40; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -216,7 +216,7 @@ function buyBoxNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 300) {
-      upgradeCount +=40; 
+      upgradeCount +=20; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
