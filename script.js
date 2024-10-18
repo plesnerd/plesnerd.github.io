@@ -715,7 +715,7 @@ function buySolarNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 1000000000000) {
-      upgradeCount +=200000000; 
+      upgradeCount +=2000000000; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
