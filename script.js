@@ -38,7 +38,7 @@ function startUpgradeInterval(count) {
 }
 
 function updateUpgradeCount() {
-  upgradeCountElement.textContent = `per second: ${Math.floor(upgradeCount / 1)}`; // Display half of the upgrade count
+  upgradeCountElement.textContent = `per second: ${Math.floor(upgradeCount / 2)}`; // Display half of the upgrade count
 }
 
 
@@ -162,7 +162,7 @@ function buyHandfullNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 55) {
-      upgradeCount +=1; 
+      upgradeCount +=2; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -217,7 +217,7 @@ function buyBoxNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 300) {
-      upgradeCount +=6; 
+      upgradeCount +=20; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -266,7 +266,7 @@ function startUpgradeInterval(upgrades) {
     clearInterval(upgradeInterval);  
   }
   upgradeInterval = setInterval(() => {
-    nerd += upgrades * 1; 
+    nerd += upgrades * 0.5; 
     updateScore();
     localStorage.setItem("nerd", nerd);
   }, 1000);
