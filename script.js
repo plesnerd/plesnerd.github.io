@@ -162,7 +162,7 @@ function buyHandfullNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 55) {
-      upgradeCount +=2; 
+      upgradeCount +=1; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -217,7 +217,7 @@ function buyBoxNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 300) {
-      upgradeCount +=12; 
+      upgradeCount +=6; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
@@ -266,7 +266,7 @@ function startUpgradeInterval(upgrades) {
     clearInterval(upgradeInterval);  
   }
   upgradeInterval = setInterval(() => {
-    nerd += upgrades * 0.5; 
+    nerd += upgrades * 1; 
     updateScore();
     localStorage.setItem("nerd", nerd);
   }, 1000);
