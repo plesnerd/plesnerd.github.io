@@ -1039,7 +1039,7 @@ function buyBeyondNerd(price) {
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
     } else if (price === 1000000000000000) {
-      upgradeCount *= 999999999999999; 
+      upgradeCount *= 9999999; 
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
