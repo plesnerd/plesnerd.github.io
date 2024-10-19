@@ -1029,6 +1029,60 @@ function buyOmniverseNerd(price) {
     alert("you don't have enough nerd to buy this item");
   }
 }
+function buyMultiverseNerd(price) {
+  if (nerd >= price) {
+    nerd -= price;
+    updateScore();
+    localStorage.setItem("nerd", nerd);
+    if (price === 50) {
+      upgradeCount++;
+      localStorage.setItem("upgradeCount", upgradeCount);
+      startUpgradeInterval(upgradeCount);
+    } else if (price === 10000000000000) {
+      upgradeCount +=1000000000000; 
+      localStorage.setItem("upgradeCount", upgradeCount);
+      startUpgradeInterval(upgradeCount);
+      updateUpgradeCount();
+
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+      };
+
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 30,
+          scalar: 1.2,
+          shapes: ["emoji"],
+          colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 20,
+          scalar: 2,
+          shapes: ["emoji"],
+          shapeOptions: {
+            emoji: {
+              value: "🍁",
+            },
+          },
+        });
+      }
+
+     setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
+
+    }
+  } else {
+    alert("you don't have enough nerd to buy this item");
+  }
+}
 function buyBeyondNerd(price) {
   if (nerd >= price) {
     nerd -= price;
@@ -1038,8 +1092,8 @@ function buyBeyondNerd(price) {
       upgradeCount++;
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
-    } else if (price === 1000000000000000) {
-      upgradeCount *= 9999999; 
+    } else if (price === 1000000000000000000) {
+      upgradeCount *= 9999999;
       localStorage.setItem("upgradeCount", upgradeCount);
       startUpgradeInterval(upgradeCount);
       updateUpgradeCount();
