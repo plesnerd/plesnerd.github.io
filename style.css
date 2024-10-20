@@ -119,10 +119,16 @@ img {
     color: blue;
   }
   100% {
-    color: violet;
+    color: magenta;
   }
 }
 
 .rainbow {
   animation: rainbow 2s infinite;
+}
+
+input {
+  width: 100%;
+  border: 5px solid #673418;
+  border-radius: 2px;
 }

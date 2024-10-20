@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 let nerd = localStorage.getItem("nerd") ? parseFloat(localStorage.getItem("nerd")) : 0;
 let upgradeCount = localStorage.getItem("upgradeCount") ? parseInt(localStorage.getItem("upgradeCount")) : 0;
 let npc = localStorage.getItem("npc") ? parseInt(localStorage.getItem("npc")) : 1;
@@ -1482,3 +1483,43 @@ function nerdChanged() {
       break
   }
 }
+
+
+
+  function gamble(nerd, betPercentage) {
+          // Validate bet percentage
+          if (betPercentage < 0 || betPercentage > 100) {
+              alert("invalid bet percentage");
+              return nerd; // Return the unchanged score
+          }
+
+          const betAmount = nerd * (betPercentage / 100);
+
+          // Check if the bet amount is greater than zero
+          if (betAmount <= 0) {
+              alert("bet amount must be greater than zero");
+              return nerd; // Return the unchanged score
+          }
+
+          // Generate a random number between 0 and 1
+          const outcome = Math.random();
+
+          // Determine win or lose (1/3 chance to win)
+          if (outcome < (1 / 3)) {  // 1/3 chance
+              nerd += betAmount;    // Win: double the bet
+              alert(`you won. you now have ${nerd} nerd`);
+          } else {  // 2/3 chance
+              nerd -= betAmount;    // Lose: lose the bet amount
+              alert(`you lost. you now have ${nerd} nerd`);
+          }
+
+          return nerd; // Return the updated score
+      }
+
+      // Event listener setup
+      document.getElementById('gambleButton').addEventListener('click', function() {
+          const betPercentage = parseFloat(document.getElementById('betPercentage').value);
+          nerd = gamble(nerd, betPercentage);
+          document.getElementById('score').textContent = nerd; // Update displayed score
+      });
+  });
