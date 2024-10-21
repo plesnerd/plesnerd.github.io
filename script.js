@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
 let nerd = localStorage.getItem("nerd") ? parseFloat(localStorage.getItem("nerd")) : 0;
 let upgradeCount = localStorage.getItem("upgradeCount") ? parseInt(localStorage.getItem("upgradeCount")) : 0;
 let npc = localStorage.getItem("npc") ? parseInt(localStorage.getItem("npc")) : 1;
@@ -1483,56 +1482,65 @@ function nerdChanged() {
       break
   }
 }
+// Initially disable the gamble button
+const gambleButton = document.getElementById('gambleButton');
+gambleButton.disabled = true;
 
+const betPercentageInput = document.getElementById('betPercentage');
 
-    function gamble(betPercentage) {
-        // Validate bet percentage
-        if (betPercentage < 0 || betPercentage > 100) {
-            alert("Invalid bet percentage.");
-            return; // Exit the function if invalid
-        }
+// Function to validate bet percentage and toggle button state
+function validateBetPercentage() {
+    const betPercentage = betPercentageInput.value; // Get the raw input as a string
+    const betPercentageNum = parseFloat(betPercentage);
 
-        const betAmount = nerd * (betPercentage / 100);
+    // Check if the input is a valid number, an integer, and within the allowed range
+    if (!isNaN(betPercentageNum) && Number.isInteger(betPercentageNum) && betPercentageNum >= 0 && betPercentageNum <= 100) {
+        gambleButton.disabled = false; // Enable button if valid
+    } else {
+        gambleButton.disabled = true; // Disable button if invalid
+    }
+}
 
-        // Check if the bet amount is greater than zero
-        if (betAmount <= 0) {
-            alert("Bet amount must be greater than zero.");
-            return; // Exit the function if invalid
-        }
+// Add event listener to input field
+betPercentageInput.addEventListener('input', validateBetPercentage);
 
-        // Generate a random number between 0 and 1
-        const outcome = Math.random();
-
-        // Determine win or lose (1/3 chance to win)
-        if (outcome < (1 / 3)) {  // 1/3 chance
-            nerd += betAmount;    // Win: double the bet
-            alert(`You won! Your new score is ${nerd}.`);
-        } else {  // 2/3 chance
-            nerd -= betAmount;    // Lose: lose the bet amount
-            alert(`You lost! Your new score is ${nerd}.`);
-        }
-
-        // Update the displayed score
-        document.getElementById('score').textContent = nerd; 
+// Gamble function
+function gamble(betPercentage) {
+    // Validate bet percentage
+    if (betPercentage < 0 || betPercentage > 100) {
+        alert("Invalid bet percentage.");
+        return; // Exit the function if invalid
     }
 
-    // Event listener setup
-    document.getElementById('gambleButton').addEventListener('click', function() {
-        const betPercentage = parseFloat(document.getElementById('betPercentage').value);
-        gamble(betPercentage); // Call gamble function with bet percentage
-    });
+    // Calculate and round up the bet amount
+    const betAmount = Math.ceil(nerd * (betPercentage / 100));
 
-    // Example of another function
-    function resetGame() {
-        nerd = 1000; // Reset score to initial value
-        document.getElementById('score').textContent = nerd; // Update displayed score
-        alert("Game reset!");
+    // Check if the bet amount is greater than zero
+    if (betAmount <= 0) {
+        alert("Bet amount must be greater than zero.");
+        return; // Exit the function if invalid
     }
 
-    // Add another button for resetting the game
-    const resetButton = document.createElement('button');
-    resetButton.textContent = 'Reset Game';
-    document.body.appendChild(resetButton);
+    // Generate a random number between 0 and 1
+    const outcome = Math.random();
 
-    resetButton.addEventListener('click', resetGame); // Add event listener for reset button
+    // Determine win or lose (1/3 chance to win)
+    if (outcome < (1 / 3)) {  // 1/3 chance
+        nerd += betAmount;    // Win: double the bet
+        alert(`You won! Your new score is ${nerd}.`);
+    } else {  // 2/3 chance
+        nerd -= betAmount;    // Lose: lose the bet amount
+        alert(`You lost! Your new score is ${nerd}.`);
+    }
+
+    // Update the displayed score
+    document.getElementById('score').textContent = nerd; 
+}
+
+// Event listener setup for gamble button
+gambleButton.addEventListener('click', function() {
+    const betPercentage = parseFloat(betPercentageInput.value);
+    gamble(betPercentage); // Call gamble function with bet percentage
 });
+
+// Example of another function
